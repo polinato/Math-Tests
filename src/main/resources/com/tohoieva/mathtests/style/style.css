@@ -1,0 +1,49 @@
+anchorPane {
+    -fx-background-color: #E2E4F2;
+    -fx-font-family: Segoe UI;
+}
+
+#caption {
+    -fx-font-size: 28px;
+}
+
+Button, Button:focused, Label, Spinner, ChoiceBox, TextArea, TextField {
+    -fx-font-family: Segoe UI;
+    -fx-font-size: 14px;
+}
+
+Button, Button:focused {
+    -fx-height: 30px;
+    -fx-background-color: #F1EEF5;
+    -fx-border-width: 2px;
+    -fx-border-radius: 3px;
+    -fx-text-fill: #12153E;
+    -fx-border-color: #BEB8DF;
+}
+
+Button:hover {
+    -fx-height: 30px;
+    -fx-border-width: 2px;
+    -fx-border-radius: 3px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #F1EEF5;
+    -fx-border-color: #12153E;
+    -fx-background-color: #12153E;
+    -fx-font-family: Segoe UI;
+}
+
+Button:pressed {
+    -fx-background-color: #3CCBBD;
+    -fx-border-color: #3CCBBD;
+    -fx-text-fill: #12153E;
+}
+
+TextArea:focused, TextField:focused, Spinner:focused, ChoiceBox:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: #BEB8DF;
+}
+
+TextArea:disabled {
+    -fx-control-inner-background: #F1EEF5;
+    -fx-font-family: Segoe UI;
+}

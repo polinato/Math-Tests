@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.ClosePath?>
+<?import javafx.scene.shape.LineTo?>
+<?import javafx.scene.shape.MoveTo?>
+<?import javafx.scene.shape.Path?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tohoieva.mathtests.addTask.AddTaskController">
+   <children>
+      <VBox layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <AnchorPane prefHeight="31.0" prefWidth="579.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleButtonToMainManu" prefHeight="30.0">
+                     <graphic>
+                        <Path id="path" fill="#755bf5" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0">
+                           <elements>
+                              <MoveTo y="10.0" />
+                              <LineTo x="20.0" />
+                              <LineTo x="20.0" y="5.0" />
+                              <LineTo x="36.0" y="5.0" />
+                              <LineTo x="36.0" y="15.0" />
+                              <LineTo x="20.0" y="15.0" />
+                              <LineTo x="20.0" y="20.0" />
+                              <ClosePath />
+                           </elements>
+                        </Path>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label id="caption" alignment="CENTER" prefHeight="40.0" prefWidth="579.0" text="Додавання завдання" wrapText="true">
+               <font>
+                  <Font name="Segoe UI" size="28.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="242.0" prefWidth="579.0">
+               <children>
+                  <Label layoutX="3.0" layoutY="14.0" text="Питання:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="questionArea" layoutY="39.0" prefHeight="102.0" prefWidth="579.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextArea>
+                  <Label layoutY="164.0" text="Відповідь:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="answerField" layoutY="189.0" minWidth="100.0" prefHeight="26.0" prefWidth="100.0">
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <ButtonBar prefHeight="40.0" prefWidth="600.0">
+               <buttons>
+                  <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="38.0" text="Клас:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Spinner fx:id="gradeSpinner" editable="true" prefHeight="30.0" prefWidth="60.0" />
+                        <Label prefHeight="18.0" prefWidth="40.0" text="Тема:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="topicList" prefHeight="30.0" prefWidth="134.0" />
+                        <Label prefHeight="18.0" prefWidth="58.0" text="Рівнень:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="levelList" prefHeight="30.0" prefWidth="114.0" />
+                        <Button mnemonicParsing="false" onAction="#handleButtonSaveQuestion" prefHeight="30.0" prefWidth="80.0" text="ОК">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </buttons>
+            </ButtonBar>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
